@@ -118,8 +118,10 @@ run().catch(console.dir);
 
 // testing server status
 app.get('/', (req, res) => {
-  console.log('Server is alive and breathing');
-  res.send('Hello I"m your server dude');
+  res.send('Hello I"m your alive server dude');
+});
+app.get('/test', (req, res) => {
+  res.send('Hello Updated here');
 });
 app.listen(port, () => {
   console.log('Fantasy server breathing at port: ', port);
